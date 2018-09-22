@@ -11,7 +11,7 @@ To learn more check out our [documentation](https://plot.ly/dash).
 The following is a screenshot for the app in this repo:
 
 
-![Alt desc](https://github.com/sumantabose/learn-dash/raw/master/examples/stock-tickers/Screenshots/Screenshot.png)
+![Alt desc](./Screenshots/Screenshot.png)
 
 **Source**
 [Here](https://github.com/plotly/dash-stock-tickers-demo-app).
