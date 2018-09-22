@@ -19,10 +19,17 @@ colorscale = cl.scales['9']['qual']['Paired']
 
 # df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/dash-stock-ticker-demo.csv')
 df = pd.read_csv('stock-ticker.csv')
+mdf = df # modified df
+
+mdf.loc[df["Stock"]=="AAPL", "Stock"] = "WURFBAIN"
+mdf.loc[df["Stock"]=="GOOGL", "Stock"] = "SINOCHEM"
+mdf.loc[df["Stock"]=="TSLA", "Stock"] = "HALCYON"
+mdf.loc[df["Stock"]=="COKE", "Stock"] = "CORRIEMACCOLL"
+mdf.loc[df["Stock"]=="YHOO", "Stock"] = "ALANLGRANT"
 
 app.layout = html.Div([
     html.Div([
-        html.H2('Stocks Explorer',
+        html.H2('Rubber Stocks Explorer',
                 style={'display': 'inline',
                        'float': 'left',
                        'font-size': '2.65em',
@@ -44,7 +51,8 @@ app.layout = html.Div([
         id='stock-ticker-input',
         options=[{'label': s[0], 'value': str(s[1])}
                  for s in zip(df.Stock.unique(), df.Stock.unique())],
-        value=['AAPL', 'GOOGL'],
+        # value=['AAPL', 'GOOGL'],
+        value=['HALCYON', 'SINOCHEM'],
         multi=True
     ),
     html.Div(id='graphs')
@@ -71,7 +79,7 @@ def update_graph(tickers):
     else:
         for i, ticker in enumerate(tickers):
 
-            dff = df[df['Stock'] == ticker]
+            dff = mdf[mdf['Stock'] == ticker]
 
             candlestick = {
                 'x': dff['Date'],
