@@ -21,7 +21,7 @@ colorscale = cl.scales['9']['qual']['Paired']
 df = pd.read_csv('stock-ticker.csv')
 mdf = df # modified df
 
-mdf.loc[df["Stock"]=="AAPL", "Stock"] = "WURFBAIN"
+mdf.loc[df["Stock"]=="AAPL", "Stock"] = "HEAVEAPRO"
 mdf.loc[df["Stock"]=="GOOGL", "Stock"] = "SINOCHEM"
 mdf.loc[df["Stock"]=="TSLA", "Stock"] = "HALCYON"
 mdf.loc[df["Stock"]=="COKE", "Stock"] = "CORRIEMACCOLL"
@@ -52,7 +52,7 @@ app.layout = html.Div([
         options=[{'label': s[0], 'value': str(s[1])}
                  for s in zip(df.Stock.unique(), df.Stock.unique())],
         # value=['AAPL', 'GOOGL'],
-        value=['HALCYON', 'SINOCHEM'],
+        value=['HALCYON', 'HEAVEAPRO'],
         multi=True
     ),
     html.Div(id='graphs')
