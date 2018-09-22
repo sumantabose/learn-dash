@@ -17,11 +17,12 @@ dcc._js_dist[0]['external_url'] = 'https://cdn.plot.ly/plotly-finance-1.28.0.min
 
 colorscale = cl.scales['9']['qual']['Paired']
 
-df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/dash-stock-ticker-demo.csv')
+# df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/dash-stock-ticker-demo.csv')
+df = pd.read_csv('stock-ticker.csv')
 
 app.layout = html.Div([
     html.Div([
-        html.H2('Finance Explorer',
+        html.H2('Stocks Explorer',
                 style={'display': 'inline',
                        'float': 'left',
                        'font-size': '2.65em',
@@ -32,7 +33,7 @@ app.layout = html.Div([
                        'margin-top': '20px',
                        'margin-bottom': '0'
                        }),
-        html.Img(src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/logo/new-branding/dash-logo-by-plotly-stripe.png",
+        html.Img(src="https://www.halcyonagri.com/wp-content/themes/vw-lawyer-attorney/images/halcyon-logo.png",
                 style={
                     'height': '100px',
                     'float': 'right'
@@ -43,7 +44,7 @@ app.layout = html.Div([
         id='stock-ticker-input',
         options=[{'label': s[0], 'value': str(s[1])}
                  for s in zip(df.Stock.unique(), df.Stock.unique())],
-        value=['YHOO', 'GOOGL'],
+        value=['AAPL', 'GOOGL'],
         multi=True
     ),
     html.Div(id='graphs')
