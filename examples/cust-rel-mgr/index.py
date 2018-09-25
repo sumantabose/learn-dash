@@ -21,7 +21,7 @@ app.layout = html.Div(
             html.Div(
                 html.Img(src='https://www.halcyonagri.com/wp-content/themes/vw-lawyer-attorney/images/halcyon-logo.png',height="100%")
                 ,style={"float":"right","height":"100%"}),
-            html.P("Dashboard App using Salesforce API customized for HalcyonAgri (HeaveaConnect)")
+            html.P("Dashboard App using Salesforce API customized for HalcyonAgri (HeveaConnect)")
             ],
             # 
             className="row header"
