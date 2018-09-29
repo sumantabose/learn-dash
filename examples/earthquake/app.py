@@ -405,5 +405,5 @@ def _update_graph(map_style, region):
     return figure
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 9020))
     app.run_server(debug=debug,  port=port, threaded=True)
