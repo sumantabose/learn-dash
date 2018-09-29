@@ -131,4 +131,6 @@ if 'DYNO' in os.environ:
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
+    port = int(os.environ.get('PORT', 9040))
+    app.run_server(debug=True, port=port)

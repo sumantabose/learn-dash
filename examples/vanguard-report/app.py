@@ -1320,4 +1320,6 @@ for js in external_js:
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
+    port = int(os.environ.get('PORT', 9050))
+    app.run_server(debug=True, port=port)

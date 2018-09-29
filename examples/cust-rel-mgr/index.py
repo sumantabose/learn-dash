@@ -10,13 +10,14 @@ from plotly import graph_objs as go
 import math
 from app import app, server, sf_manager
 from apps import opportunities, cases, leads
+import os
 
 app.layout = html.Div(
     [
         # header
         html.Div([
 
-            html.Span("Customer Relationship Management Dashboard [Natural Rubber]", className='app-title'),
+            html.Span("Customer Relationship Management Dashboard", className='app-title'),
             
             html.Div(
                 html.Img(src='https://www.halcyonagri.com/wp-content/themes/vw-lawyer-attorney/images/halcyon-logo.png',height="100%")
@@ -84,4 +85,6 @@ def render_content(tab):
         return opportunities.layout
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
+    port = int(os.environ.get('PORT', 9010))
+    app.run_server(debug=True, port=port)

@@ -3,6 +3,7 @@ import json
 import base64
 import datetime
 import requests
+import os
 
 import pandas as pd
 import flask
@@ -1722,4 +1723,6 @@ def update_news_div(n):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True, threaded=True)
+    # app.run_server(debug=True, threaded=True)
+    port = int(os.environ.get('PORT', 9030))
+    app.run_server(debug=True, port=port, threaded=True)
