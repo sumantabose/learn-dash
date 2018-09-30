@@ -97,7 +97,7 @@ app.index_string = '''
 <html>
     <head>
         {%metas%}
-        <title>My Custom Title</title>
+        <title>HalcyonAgri Digitization Dashboard | Vanguard 500 Index</title>
         {%favicon%}
         {%css%}
     </head>
@@ -1356,6 +1356,10 @@ def display_page(pathname):
     else:
         return noPage
 
+external_css_2 = ["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"]
+
+for css in external_css_2:
+    app.css.append_css({"external_url": css})
 
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css",
                 "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css",
@@ -1364,11 +1368,6 @@ external_css = ["https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normaliz
                 "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"]
 
 for css in external_css:
-    app.css.append_css({"external_url": css})
-
-external_css_2 = ["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"]
-
-for css in external_css_2:
     app.css.append_css({"external_url": css})
 
 external_js = ["https://code.jquery.com/jquery-3.2.1.min.js",
