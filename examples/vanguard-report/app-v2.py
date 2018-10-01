@@ -96,6 +96,7 @@ app.index_string = '''
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         {%metas%}
         <title>HalcyonAgri Digitization Dashboard | Vanguard 500 Index</title>
         {%favicon%}
@@ -1356,10 +1357,10 @@ def display_page(pathname):
     else:
         return noPage
 
-external_css_2 = ["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"]
+# external_css_2 = ["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"]
 
-for css in external_css_2:
-    app.css.append_css({"external_url": css})
+# for css in external_css_2:
+#     app.css.append_css({"external_url": css})
 
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css",
                 "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css",
