@@ -53,7 +53,8 @@ data = json.loads(req.text)
 # with open('4.5_month.geojson') as data_file:
 #     data = json.load(data_file)
 
-mapbox_access_token = os.environ.get('MAPBOX_ACCESS_TOKEN', 'mapbox-token')
+# mapbox_access_token = os.environ.get('MAPBOX_ACCESS_TOKEN', 'mapbox-token')
+mapbox_access_token = 'pk.eyJ1Ijoic3VtYW50YWJvc2UiLCJhIjoiY2ptbTBlcTJjMDgwbzNxazRhbnA0cmR4aSJ9.717T_hJ6OUrU5txClbcKmg'
 
 # http://colorbrewer2.org/#type=sequential&scheme=YlOrRd&n=5
 colorscale_magnitude = [
@@ -267,12 +268,12 @@ def create_dropdowns():
             {'label': 'Light', 'value': 'light'},
             {'label': 'Dark', 'value': 'dark'},
             {'label': 'Satellite', 'value': 'satellite'},
-            {
-                'label': 'Custom',
-                'value': 'mapbox://styles/jackdbd/cj6nva4oi14542rqr3djx1liz'
-            }
+            # {
+            #     'label': 'Custom',
+            #     'value': 'mapbox://styles/jackdbd/cj6nva4oi14542rqr3djx1liz'
+            # }
         ],
-        value='dark',
+        value='light',
         id='dropdown-map-style',
         className='three columns offset-by-one'
     )
