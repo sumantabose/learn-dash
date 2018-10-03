@@ -12,60 +12,34 @@ from app import app, server, sf_manager
 from apps import opportunities, cases, leads
 import os
 
-# app.index_string = '''
-# <!DOCTYPE html>
-# <html>
-#     <head>
-#         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-#         {%metas%}
-#         <title>HalcyonAgri Digitization Dashboard | Customer Relationship Management</title>
-#         {%favicon%}
-#         {%css%}
-#     </head>
-#     <body>
-#         <nav class="navbar navbar-inverse">
-#         <div class="container-fluid">
-#           <div class="navbar-header">
-#             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-#               <span class="icon-bar"></span>
-#               <span class="icon-bar"></span>
-#               <span class="icon-bar"></span>                        
-#             </button>
-#             <a class="navbar-brand" href="#">HalcyonAgri</a>
-#           </div>
-#           <div class="collapse navbar-collapse" id="myNavbar">
-#             <ul class="nav navbar-nav">
-#               <li class="active"><a href="#">Dashboard</a></li>
-#               <li><a href="#">Apps</a></li>
-#               <li><a href="#">Update</a></li>
-#               <li><a href="#">Help</a></li>
-#             </ul>
-#             <ul class="nav navbar-nav navbar-right">
-#               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Gerald Tan</a></li>
-#               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-#             </ul>
-#           </div>
-#         </div>
-#         </nav> <!--
-#         <nav class="navbar">
-#         </nav> -->
-#         {%app_entry%}
-#         <footer>
-#             <nav class="container-fluid text-center navbar-inverse">
-#               <p>
-#                 <span style="color: #ffffff;">
-#                   <a style="color: #ffffff;" href="https://sumantabose.me" target="_blank">
-#                   Developed by Sumanta Bose only for demostration purposes to HalcyonAgri.
-#                   </a>
-#                 </span>
-#               </p>
-#             </nav>
-#             {%config%}
-#             {%scripts%}
-#         </footer>
-#     </body>
-# </html>
-# '''
+app.index_string = '''
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        {%metas%}
+        <title>HalcyonAgri Digitization Dashboard | Customer Relationship Management</title>
+        {%favicon%}
+        {%css%}
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            <nav class="container-fluid text-center navbar-inverse">
+              <p>
+                <span style="color: #ffffff;">
+                  Developed by 
+                  <a style="color: #ffffff;" href="https://sumantabose.me" target="_blank">Sumanta Bose</a>
+                   using open-source data under MIT license, only for demostration purposes to HalcyonAgri.
+                </span>
+              </p>
+            </nav>
+            {%config%}
+            {%scripts%}
+        </footer>
+    </body>
+</html>
+'''
 
 app.layout = html.Div(
     [
