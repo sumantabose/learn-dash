@@ -16,6 +16,14 @@ app.index_string = '''
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+          function helpFunction() {
+              alert("Contact Sumanta Bose for help!");
+          }
+          function updateFunction() {
+              alert("Current version 1.0.0. Dashboard is updated. No new updates are available now.");
+          }
+        </script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         {%metas%}
         <title>HalcyonAgri Digitization Dashboard | Customer Relationship Management</title>
@@ -24,29 +32,76 @@ app.index_string = '''
     </head>
     <body>
         <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#">HalcyonAgri</a>
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="https://www.halcyonagri.com" target="_blank">HalcyonAgri</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="http://halcyon-dashboard.herokuapp.com/index.html">Dashboard</a></li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Apps <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HalcyonAgri Rubber Supply Chain</a></li>
+                        <li><a href="#">Rubber Market Stocks Explorer</a></li>
+                        <li><a href="#">Customer Relationship Management</a></li>
+                        <li><a href="#">Forex Trading and News Platform</a></li>
+                        <li><a href="#">Real-time Global Earthquake Data Map</a></li>
+                        <li><a href="#">Real-time Plantation Wind Speed Streaming</a></li>
+                        <li><a href="#">Smart Factory Label Classification</a></li>
+                        <li><a href="#">Vanguard 500 Index Fund Investor Shares</a></li>
+                        <li><a href="#">Industry 4.0 IoT/CPS/GPS tracking</a></li>
+                        <li><a href="#">Industry 4.0 Process Automation (IEDs)</a></li>
+                        <li><a href="#">HeveaConnect Blockchain Explorer</a></li>
+                        <li><a href="#">Your App!</a></li>
+                    </ul>
+                </li>
+                <li class="button" onclick="updateFunction()"><a href="#">Update</a></li>
+                <li class="button" onclick="helpFunction()"><a href="#">Help</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                      <span class="glyphicon glyphicon-user"></span>
+                      Gerald Tan <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Favourites</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                      <span class="glyphicon glyphicon-bell"></span>
+                      Notifications <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Alerts</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Drafts</a></li>
+                        <li><a href="#">Sent Items</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Trash</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Dashboard</a></li>
-              <li><a href="#">Apps</a></li>
-              <li><a href="#">Update</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Gerald Tan</a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-            </ul>
-          </div>
-        </div>
-        </nav> <!--
+        </nav>
+
+        <!--
         <nav class="navbar">
         </nav> -->
         {%app_entry%}
